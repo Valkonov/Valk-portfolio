@@ -1,4 +1,6 @@
-class PortfoliosController < ApplicationController[5.1]
+class PortfoliosController < ApplicationController
+  before_action :edit_portfolio_path, only: [:edit, :show, :update, :destroy]
+
   def index
     @portfolio_items = Portfolio.all
   end
